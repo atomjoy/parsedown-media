@@ -1,0 +1,42 @@
+{
+    "name": "atomjoy/parsedown-media",
+    "description": "Create audio, video, embed video and image gallery with slider from Markdown file.",
+    "keywords": [
+        "markdown",
+        "parser",
+        "markdown-gallery",
+        "markdown-media",
+        "markdown-audio",
+        "markdown-video",
+        "markdown-embed"
+    ],
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Atomjoy"
+        }
+    ],
+    "require": {
+        "php": ">=7.2",
+        "ext-mbstring": "*",
+        "erusev/parsedown": "1.8.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.5|^8.5|^9.6"
+    },
+    "autoload": {
+        "classmap": [
+            "src/"
+        ],
+        "psr-4": {
+            "Atomjoy\\Parsedown\\": "src/"
+        },
+        "files": []
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Atomjoy\\TestParsedown\\": "test/"
+        }
+    }
+}
