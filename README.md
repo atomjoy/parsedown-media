@@ -208,6 +208,47 @@ Add fontawesome cdn links in head first.
 - [ ] this is an incomplete item
 ```
 
+### ToDo list html
+
+```html
+<ul class="todo-list">
+    <li class="todo-item list-none">
+        <i class="todo-icon fas fa-check-square todo-icon-checked"></i>
+        <span class="todo-text">Finish my changes</span>
+    </li>
+    <li class="todo-item list-none">
+        <i class="todo-icon far fa-square"></i>
+        <span class="todo-text">Push my commits to GitHub</span>
+    </li>
+    <li class="todo-item list-none">
+        <i class="todo-icon far fa-square"></i>
+        <span class="todo-text">Open a pull request</span>
+    </li>
+    <li class="todo-item list-none">
+        <i class="todo-icon fas fa-check-square todo-icon-checked"></i>
+        <span class="todo-text"
+            >@mentions, #refs, [links](), **formatting**, and
+            &lt;del&gt;tags&lt;/del&gt; supported</span
+        >
+    </li>
+    <li class="todo-item list-none">
+        <i class="todo-icon fas fa-check-square todo-icon-checked"></i>
+        <span class="todo-text"
+            >list syntax required (any unordered or ordered list
+            supported)</span
+        >
+    </li>
+    <li class="todo-item list-none">
+        <i class="todo-icon fas fa-check-square todo-icon-checked"></i>
+        <span class="todo-text">this is a complete item</span>
+    </li>
+    <li class="todo-item list-none">
+        <i class="todo-icon far fa-square"></i>
+        <span class="todo-text">this is an incomplete item</span>
+    </li>
+</ul>
+```
+
 ## Secure input (optional)
 
 ```php
