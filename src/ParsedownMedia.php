@@ -315,4 +315,68 @@ class ParsedownMedia extends Parsedown
     {
         return $block;
     }
+
+    /**
+     * blockListComplete
+     *
+     * @param array $Block
+     * @return mixed
+     */
+    protected function blockListComplete(array $Block)
+    {
+        $list = $this->parseToDoList($Block);
+
+        return $list;
+    }
+
+    /**
+     * parseToDoList
+     *
+     * Markdown todo list parser with fontawesome icons.
+     *
+     * @param array $Block
+     * @return mixed
+     */
+    protected function parseToDoList(array $Block)
+    {
+        $list = parent::blockListComplete($Block);
+
+        if (!isset($list)) {
+            return null;
+        }
+
+        foreach ($list['element'] as $key => $listItem) {
+            if (is_array($listItem)) {
+                foreach ($listItem as $inList => $items) {
+                    $item = $items['handler']['argument'];
+                    if (isset($item) && is_array($item)) {
+                        $checkmark = strtolower(substr($item[0], 0, 3));
+                        $text = trim(substr($item[0], 3));
+                        if ($checkmark === '[x]' || $checkmark === '[ ]') {
+                            $iconClass = $checkmark === '[x]' ? 'fas fa-check-square todo-icon-checked' : 'far fa-square';
+                            $list['element']['attributes']['class'] = 'todo-list';
+                            $list['element']['elements'][$inList] = [
+                                'name' => 'li',
+                                'attributes' => ['class' => 'list-none todo-item'],
+                                'elements' => [
+                                    [
+                                        'name' => 'i',
+                                        'attributes' => ['class' => 'todo-icon ' . $iconClass],
+                                        'text' => '',
+                                    ],
+                                    [
+                                        'name' => 'span',
+                                        'attributes' => ['class' => 'todo-text'],
+                                        'text' => $text,
+                                    ]
+                                ]
+                            ];
+                        }
+                    }
+                }
+            }
+        }
+
+        return $list;
+    }
 }
