@@ -168,9 +168,11 @@ echo $p->text("&&&box\nhttps://img.icons8.com/bubbles/100/google-logo.jpg\nhttps
 
 <script>
     /* Required */
-    onload = (event) => {
-        new Splide('.splide').mount();
-    };
+    document.addEventListener('DOMContentLoaded', (event) => {
+        setTimeout(() => {
+            new Splide('.splide').mount();
+        }, 1000);
+    });
 </script>
 
 <style>
@@ -190,10 +192,26 @@ echo $p->text("&&&box\nhttps://img.icons8.com/bubbles/100/google-logo.jpg\nhttps
 </style>
 ```
 
+## Parse ToDo List
+
+Add fontawesome cdn links in head first.
+
+```md
+### ToDo list fontawesome
+
+- [x] Finish my changes
+- [ ] Push my commits to GitHub
+- [ ] Open a pull request
+- [x] @mentions, #refs, [links](), **formatting**, and <del>tags</del> supported
+- [x] list syntax required (any unordered or ordered list supported)
+- [x] this is a complete item
+- [ ] this is an incomplete item
+```
+
 ## Secure input (optional)
 
 ```php
-$p = new ParsedownGallery();
+$p = new ParsedownMedia();
 
 $p->setSafeMode(true);
 ```
