@@ -255,6 +255,22 @@ Add fontawesome cdn links in head first.
 </ul>
 ```
 
+## Tailwind markdown style
+
+```sh
+# Install
+npm install -D @tailwindcss/typography
+
+# Add to app.css
+@import "tailwindcss";
+@plugin "@tailwindcss/typography"; 
+
+# Markdown preview in vue with tailwind
+<div v-html="payload.content_html" class="prose markdown mt-1 rounded border p-4"></div>
+
+# Add or import markdown.css to app.css
+```
+
 ## Secure input (optional)
 
 ```php
