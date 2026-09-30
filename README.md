@@ -266,7 +266,7 @@ npm install -D @tailwindcss/typography
 @plugin "@tailwindcss/typography"; 
 
 # Markdown preview in vue with tailwind
-<div v-html="payload.content_html" class="prose markdown mt-1 rounded border p-4"></div>
+<div v-html="payload.content_html" class="prose max-w-none markdown mt-1 rounded border p-4"></div>
 
 # Add or import markdown.css to app.css
 ```
