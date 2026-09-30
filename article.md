@@ -1,4 +1,4 @@
-# H1 header (Article Example)
+# Markdown Article Example (H1 header)
 
 Paragraphs are separated by a blank line.
 
