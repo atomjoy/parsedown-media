@@ -1,0 +1,83 @@
+/* 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+npm install -D @tailwindcss/typography
+
+@import "tailwindcss";
+@plugin "@tailwindcss/typography"; 
+
+<div v-html="payload.content_html" class="prose markdown mt-1 rounded border p-4"></div> 
+*/
+
+/* Markdown preview */
+
+.markdown {
+	display: inline-block;
+	height: auto;
+	overflow: hidden;
+	width: 100% !important;
+	min-width: 100% !important;
+	max-width: 100% !important;
+}
+
+.markdown a {
+	color: #7ee100;
+}
+
+.markdown img {
+	display: inline-block;
+	max-width: 100%;
+	font-size: 0px;
+	border: 0px;
+}
+
+.markdown hr {
+	margin-block: 32px !important;
+}
+
+.markdown pre {
+	font-size: 15px;
+	color: #111 !important;
+	background: #fcfcfc !important;
+	font-family: 'Fira Code', Consolas, monospace;
+}
+
+.markdown .gallery-content {
+	margin: 0px;
+	padding: 0px;
+}
+
+.markdown .gallery-content li {
+	box-sizing: border-box;
+	float: left;
+	width: 50%;
+	padding: 0px;
+	margin: 0px;
+	list-style: none;
+}
+
+.markdown .gallery-content img {
+	box-sizing: border-box;
+	padding: 0px;
+	width: 100%;
+}
+
+/* Markdown splide slider */
+
+.splide {
+	background: #fff;
+	width: 100%;
+	height: 400px;
+	/* aspect-ratio: 16/9; */
+}
+
+.splide li {
+	padding: 0px;
+}
+
+.splide__image {
+	object-fit: cover;
+	width: 100%;
+	height: 400px;
+	/* aspect-ratio: 16/9; */
+}
