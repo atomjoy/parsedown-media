@@ -159,7 +159,7 @@ echo $p->text("&&&box\nhttps://img.icons8.com/bubbles/100/google-logo.jpg\nhttps
 
 ### Add Splide slider plugin and css
 
-Better use loadSplide.ts in vue component (refresh errors with cdn).
+Better use **loadSplide.ts** in vue component (refresh errors with cdn).
 
 ```html
 <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
